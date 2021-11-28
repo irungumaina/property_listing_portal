@@ -7,6 +7,12 @@ services:
     environment:
       - SECRET_KEY=django-insecure-d0$$g*uavi(1i!8zryc*m!te6i=eua=oo(%8+)grpd4$$+yjx1g7
       - DEBUG=1
+      - EMAIL_HOST=mail.teknezi.com
+      - EMAIL_HOST_USER=test@teknezi.com
+      - EMAIL_HOST_PASSWORD=kieKIE@254
+      - EMAIL_PORT=465
+      - EMAIL_USE_TLS=true
+      - DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
     volumes:
       - .:/code
     ports:
