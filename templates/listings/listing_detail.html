@@ -4,6 +4,9 @@
 
 {% block content %}
 <div class='listing-detail'>
+    {% if listing.listing_cover %}
+      <img class="listing_cover" src="{{ listing.listing_cover.url }}" alt="{{ listing.title }}">
+    {% endif %}
     <h2> <a href="">{{ listing.title }}</a> </h2>
     <p>Introduction: {{ listing.introduction }} </p>
     <p>County: {{ listing.county }} </p>

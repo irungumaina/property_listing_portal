@@ -4,5 +4,7 @@ TODO: Customize nav Bar
 TODO: Configure production server smtp emails
 TODO: Add property status options 
 TODO: Customize base page , all pages and listing detail page
+TODO: Add reviews 
+TODO: Add property Rating
 
 

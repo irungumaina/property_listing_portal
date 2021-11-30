@@ -16,6 +16,7 @@ class Listing(models.Model):
     county = models.CharField(max_length=150)
     town = models.CharField(max_length=150)
     price = models.DecimalField(max_digits=12, decimal_places=2)
+    listing_cover = models.ImageField(upload_to='listing/', blank=True)
 
     def __str__(self):
         return self.title
