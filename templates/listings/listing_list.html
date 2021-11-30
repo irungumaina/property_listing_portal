@@ -1,0 +1,13 @@
+{% extends "_base.html" %}
+
+{% block title %} Listing {% endblock title %}
+
+{% block content %}
+{% for listing in listing_list %}
+<div>
+    <h2> <a href="{{ listing.get_absolute_url }}"> {{ listing.title }}</a> </h2>
+</div>
+
+{% endfor %}
+
+{% endblock content %}

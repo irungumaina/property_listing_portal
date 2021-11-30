@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+
+{% block title %} {{ listing.title }} {% endblock title %}
+
+{% block content %}
+<div class='listing-detail'>
+    <h2> <a href="">{{ listing.title }}</a> </h2>
+    <p>Introduction: {{ listing.introduction }} </p>
+    <p>County: {{ listing.county }} </p>
+    <p>Town: {{listing.town}}</p>
+    <p>Price: {{listing.price}}</p>
+    <p>Description: {{listing.description}}</p>
+</div>
+
+{% endblock content %}

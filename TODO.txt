@@ -2,3 +2,7 @@ TODO: Make use of uiid in urls
 TODO: Add icon logo before menu using django tags and boostrap tags -- Example in bootstrap static/images
 TODO: Customize nav Bar
 TODO: Configure production server smtp emails
+TODO: Add property status options 
+TODO: Customize base page , all pages and listing detail page
+
+

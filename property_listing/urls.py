@@ -25,4 +25,5 @@ urlpatterns = [
 
     # Local Apps
     path('', include('pages.urls')),
+    path('listing/', include('listing.urls')),
 ]
