@@ -3,11 +3,54 @@
 {% block title %} Listing {% endblock title %}
 
 {% block content %}
-{% for listing in listing_list %}
-<div>
-    <h2> <a href="{{ listing.get_absolute_url }}"> {{ listing.title }}</a> </h2>
-</div>
 
-{% endfor %}
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for listing in listing_list %}
+            <div class="col">
+                <div class="card shadow-sm">
+
+                    {% if listing.listing_cover %}
+                    <img class="listing_cover bd-placeholder-img card-img-top width=" 100%" height="225"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        preserveAspectRatio="xMidYMid slice" focusable="false" src="{{ listing.listing_cover.url }}"
+                        alt="{{ listing.title }}">
+                    {% endif %}
+
+
+
+                    <div class="card-body">
+                        <h3><a href="{{ listing.get_absolute_url }}"> {{ listing.title }}</a></h3>
+                        <p class="card-text">{{ listing.introduction }}</p>
+                        <p class="card-text">{{ listing.county }}</p>
+                        <p class="card-text">{{ listing.town }}</p>
+                        <h4>Ksh. {{ listing.price }}</h4>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View Property</button>
+                                {% if user.is_authenticated %}
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit Property</button>
+
+                                {% endif %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+
+
+        </div>
+    </div>
+</div>
 
 {% endblock content %}

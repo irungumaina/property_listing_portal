@@ -19,7 +19,7 @@
 <body>
     <header>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
             <div class=" container-fluid">
                 <a class="navbar-brand" href="#">Property Listing</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -77,6 +77,19 @@
 
         {% endblock content %}
     </div>
+
+    {% comment %} Footer {% endcomment %}
+
+    <footer class="text-muted py-5">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#">Back to top</a>
+            </p>
+            <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+            <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
+                    href="../getting-started/introduction/">getting started guide</a>.</p>
+        </div>
+    </footer>
 
     {% comment %} Bootstrap5 JavaScript links {% endcomment %}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

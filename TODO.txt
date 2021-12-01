@@ -6,5 +6,16 @@ TODO: Add property status options
 TODO: Customize base page , all pages and listing detail page
 TODO: Add reviews 
 TODO: Add property Rating
+TODO: Create sticky navigation Bar
+TODO: Create top bar for contacts 
 
+
+{% if user.is_authenticated %}
+<p>Hi {{ user.email }}!</p>
+<p><a href="{% url 'account_logout' %}">Log Out</a></p>
+{% else %}
+<p>You are not logged in</p>
+<p><a href="{% url 'account_login' %}">Log In</a> |
+    <a href="{% url 'account_signup' %}">Sign Up</a></p>
+{% endif %}
 
