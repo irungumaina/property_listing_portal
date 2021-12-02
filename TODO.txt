@@ -8,6 +8,11 @@ TODO: Add reviews
 TODO: Add property Rating
 TODO: Create sticky navigation Bar
 TODO: Create top bar for contacts 
+TODO: Update .gitignore to exclude all important files from Github
+TODO: Integrate slider in single properties
+TODO: Integrate maps in single properties
+
+
 
 
 {% if user.is_authenticated %}
