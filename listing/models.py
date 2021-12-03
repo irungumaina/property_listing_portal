@@ -18,6 +18,12 @@ class Listing(models.Model):
     price = models.DecimalField(max_digits=12, decimal_places=2)
     listing_cover = models.ImageField(upload_to='listing/', blank=True)
 
+    # # notes will be sorted using this field
+    # last_udpated_on = models.DateTimeField(auto_now=True)
+
+    # # to delete a note, we will simply set is_active to False
+    # is_active = models.BooleanField(default=True)
+
     def __str__(self):
         return self.title
 

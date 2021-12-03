@@ -28,18 +28,6 @@
                         <p class="card-text">{{ listing.county }}</p>
                         <p class="card-text">{{ listing.town }}</p>
                         <h4>Ksh. {{ listing.price }}</h4>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View Property</button>
-                                {% if user.is_authenticated %}
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit Property</button>
-
-                                {% endif %}
-
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

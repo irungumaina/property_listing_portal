@@ -11,6 +11,9 @@ TODO: Create top bar for contacts
 TODO: Update .gitignore to exclude all important files from Github
 TODO: Integrate slider in single properties
 TODO: Integrate maps in single properties
+TODO: Add pagination to property listing
+TODO: Query sets 
+
 
 
 

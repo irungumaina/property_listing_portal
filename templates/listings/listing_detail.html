@@ -4,11 +4,14 @@
 
 {% block content %}
 
+
+
+
 <div class="container">
   <div class="row">
     <div class="col">
       {% if listing.listing_cover %}
-      <img class="listing_cover" src="{{ listing.listing_cover.url }}" alt="{{ listing.title }}">
+      <img class="listing_cover rounded mx-auto d-block " src="{{ listing.listing_cover.url }}" alt="{{ listing.title }}">
       {% endif %}
     </div>
   </div>
@@ -27,6 +30,27 @@
       <p>County: {{ listing.county }} </p>
       <p>Town: {{listing.town}}</p>
       <p>Price: {{listing.price}}</p>
+
+
+      {% if user.is_authenticated %}
+
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="{% url 'listing_update' listing.pk %}"> <button type="button"
+            class="btn btn-success btn-md px-4 gap-3">Update
+            Listing</button> </a>
+        <a href="{% url 'listing_delete' listing.pk  %}"><button type="button"
+            class="btn btn-outline-danger btn-md px-4">Delete
+            Listing</button> </a>
+      </div>
+
+      {% comment %} <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-success btn-md px-4 gap-3">Update
+          Listing</button>
+        <button type="button" class="btn btn-outline-danger btn-md px-4">Delete
+          Listing</button>
+      </div> {% endcomment %}
+
+      {% endif %}
 
     </div>
   </div>
